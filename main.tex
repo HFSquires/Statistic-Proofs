@@ -1,0 +1,46 @@
+\documentclass{article}
+\usepackage{defaultpackages}
+
+\hypersetup{pdftitle={Harrison's Statistic Proofs},pdfpagemode=FullScreen}
+
+
+
+
+\title{Statistic Proofs}
+\author{Harrison Squires - s2191671}
+\date{November 2023}
+
+
+\begin{document}
+
+\maketitle
+\thispagestyle{empty}
+
+
+
+\tableofcontents
+\thispagestyle{empty}
+
+
+
+\newpage
+\clearpage
+\pagenumbering{arabic} 
+\section{Expected-value identity (2.10)}
+The identity (2.10) given in the notes is:
+\begin{equation*}
+    \sigma^2 = E\left[(x-E[x])^2\right] = E[x^2]-E[x]^2
+\end{equation*}
+\textbf{Proof}
+
+\begin{align*}
+     E\left[(x-E[x])^2\right] &= E[x^2]-E[x]^2\\
+     &=E(x^2)-2xE(x)+E(x)^2 \\
+     &=E(x^2)-2E(xE[x])+E(x)^2 \\
+     &= E(x^2) -2E(x)E(x)+E(x)^2 \ \color{blue} \leftarrow \text{By linearity} \\
+     &=E(x^2)-2E(x)^2+E(x)^2 \\
+     &=E(x^2)-E(x)^2
+\end{align*}
+
+
+\end{document}

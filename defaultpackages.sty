@@ -1,0 +1,45 @@
+% mycustomstyle.sty
+
+% Declare the document class and required packages for the style file
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{defaultpackages}
+
+% Required packages
+\RequirePackage{graphicx} % Required for inserting images
+\RequirePackage{physics}
+\RequirePackage{amsmath}
+\RequirePackage{siunitx}
+\RequirePackage[version=4]{mhchem}
+\RequirePackage{setspace}
+\RequirePackage{pythonhighlight}
+\RequirePackage[bottom]{footmisc}
+\renewcommand{\thefootnote}{[\arabic{footnote}]}
+\RequirePackage{color}
+\RequirePackage{caption}
+\RequirePackage{fancyvrb}
+\RequirePackage{fancyhdr}
+\RequirePackage{lipsum}
+\RequirePackage{lastpage}
+\RequirePackage[backend=biber,style=phys]{biblatex}
+\RequirePackage{tocloft}
+\RequirePackage{geometry} % Include geometry package for margin settings
+
+%preferences
+\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
+\RequirePackage{hyperref}
+\geometry{margin=1.25in} % Set 1-inch margins
+
+% Header and footer setup
+\pagestyle{fancy}
+\cfoot{\thepage\ of \pageref{LastPage}}
+
+% Bibliography setup
+
+
+% Common commands
+\newcommand{\braketmat}[3]{\ensuremath{\bra{#1} \vb{#2} \ket{#3}}}
+\newcommand{\intinf}{\int_{-\infty}^{\infty}}
+\newcommand{\FT}[1]{\tilde{#1}(k)}
+\newcommand{\FTp}[1]{\tilde{#1}(k')}
+% End of the package
+\endinput
